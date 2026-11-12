@@ -1,0 +1,299 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Portfolio | Nama Kamu</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #0b1220;
+  color: #f1f5f9;
+  line-height: 1.7;
+}
+
+header {
+  padding: 20px;
+  text-align: center;
+  background: #111c30;
+  border-bottom: 1px solid #26364e;
+}
+
+header h2 {
+  color: #38bdf8;
+}
+
+nav {
+  margin-top: 12px;
+}
+
+nav a {
+  display: inline-block;
+  color: #cbd5e1;
+  text-decoration: none;
+  margin: 5px 8px;
+  font-size: 13px;
+}
+
+nav a:hover {
+  color: #38bdf8;
+}
+
+.container {
+  width: 90%;
+  max-width: 950px;
+  margin: auto;
+}
+
+.hero {
+  padding: 85px 0;
+  text-align: center;
+}
+
+.hero span {
+  color: #38bdf8;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin: 12px 0;
+}
+
+.hero p {
+  color: #94a3b8;
+  max-width: 600px;
+  margin: auto;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 11px 22px;
+  background: #0284c7;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+section {
+  padding: 45px 0;
+}
+
+h2.title {
+  color: #38bdf8;
+  margin-bottom: 22px;
+  font-size: 25px;
+}
+
+.card {
+  background: #142238;
+  border: 1px solid #26364e;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  color: #7dd3fc;
+  margin-bottom: 8px;
+}
+
+.card p, section p {
+  color: #cbd5e1;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skills span {
+  background: #1e3a56;
+  color: #7dd3fc;
+  padding: 8px 13px;
+  border-radius: 7px;
+  font-size: 14px;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  background: #111c30;
+  color: #94a3b8;
+  margin-top: 40px;
+}
+
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  nav a {
+    font-size: 12px;
+    margin: 4px;
+  }
+
+  section {
+    padding: 30px 0;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h2>MY PORTFOLIO</h2>
+  <nav>
+    <a href="#home">Beranda</a>
+    <a href="#about">Tentang</a>
+    <a href="#skills">Keahlian</a>
+    <a href="#projects">Proyek</a>
+    <a href="#experience">Pengalaman</a>
+    <a href="#contact">Kontak</a>
+  </nav>
+</header>
+
+<div class="container">
+
+<section class="hero" id="home">
+  <p><span>HELLO, WELCOME TO MY PORTFOLIO</span></p>
+  <h1>Halo, Saya <span>Koko Dwi Prayogo</span></h1>
+  <p>
+    Siswa kelas XII jurusan Teknik Komputer dan Jaringan
+    di SMK Negeri 2 Lamongan. Memiliki pengalaman
+    dalam organisasi, administrasi, kepemimpinan,
+    serta praktik kerja lapangan di PT Telkom Indonesia.
+    Memiliki semangat belajar dan terus mengembangkan
+    kemampuan di bidang teknologi dan dunia kerja.
+  </p>
+  <a href="#projects" class="btn">
+    Lihat Proyek Saya
+  </a>
+</section>
+
+<section id="about">
+  <h2 class="title">Tentang Saya</h2>
+  <div class="card">
+    <p>
+      Saya merupakan siswa jurusan Teknik Komputer
+      dan Jaringan yang memiliki semangat belajar,
+      disiplin, bertanggung jawab, serta mampu
+      bekerja sama dalam tim.
+    </p>
+    <p>
+      Saya terus mengembangkan kemampuan di bidang
+      teknologi, administrasi, komunikasi, dan
+      organisasi untuk mempersiapkan diri
+      menghadapi dunia kerja.
+    </p>
+  </div>
+</section>
+
+<section id="skills">
+  <h2 class="title">Keahlian</h2>
+  <div class="skills">
+    <span>Dasar Jaringan Komputer</span>
+    <span>Konfigurasi Perangkat</span>
+    <span>Administrasi</span>
+    <span>Microsoft Office</span>
+    <span>Kerja Sama Tim</span>
+    <span>Kepemimpinan</span>
+    <span>HTML & CSS Dasar</span>
+  </div>
+</section>
+
+<section id="projects">
+  <h2 class="title">Proyek Saya</h2>
+
+  <div class="card">
+    <h3>01. Miniatur Bus LED</h3>
+    <p>
+      Proyek miniatur bus berbahan karton
+      dengan rangkaian lampu LED sebagai
+      penerapan konsep energi listrik.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>02. LED Matrix Arduino</h3>
+    <p>
+      Eksperimen penggunaan Arduino dan
+      LED Matrix untuk menampilkan teks
+      berjalan.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>03. Praktik Jaringan Komputer</h3>
+    <p>
+      Dokumentasi kegiatan pembelajaran
+      dan praktik konfigurasi jaringan
+      komputer.
+    </p>
+  </div>
+
+</section>
+
+<section id="experience">
+  <h2 class="title">Pengalaman</h2>
+
+  <div class="card">
+    <h3>Praktik Kerja Lapangan</h3>
+    <p><b>PT Telkom Indonesia</b></p>
+    <p>
+      Pengalaman di bagian warehouse,
+      meliputi penerimaan barang, pengecekan
+      material, inventarisasi, barcode stock
+      opname, dan proses pengemasan.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>Organisasi Siswa Intra Sekolah</h3>
+    <p><b>OSIS</b></p>
+    <p>
+      Pengalaman dalam bidang bendahara umum,
+      administrasi keuangan, koordinasi,
+      dan kerja sama organisasi.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>Paskibra</h3>
+    <p>
+      Mengembangkan kedisiplinan,
+      tanggung jawab, kekompakan,
+      dan kepemimpinan.
+    </p>
+  </div>
+</section>
+
+<section id="contact">
+  <h2 class="title">Hubungi Saya</h2>
+  <div class="card">
+    <p>Email: kokoprayogo093@example.com</p>
+    <p>GitHub: github.com/koko-prayogo</p>
+    <p>Instagram: @kokodwi_03</p>
+  </div>
+</section>
+
+</div>
+
+<footer>
+  <p>© 2026 Koko Dwi Prayogo | Personal Portfolio</p>
+  <p>Designed with passion and creativity.</p>
+</footer>
+
+</body>
+</html>
