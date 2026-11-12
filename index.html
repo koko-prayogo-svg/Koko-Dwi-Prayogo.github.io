@@ -4,9 +4,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Portfolio | Nama Kamu</title>
+<meta name="description" content="Portofolio Koko Dwi Prayogo, siswa Teknik Komputer dan Jaringan yang memiliki pengalaman di bidang teknologi, organisasi, dan administrasi.">
+<meta name="theme-color" content="#080f1e">
+
+<title>Koko Dwi Prayogo | Personal Portfolio</title>
 
 <style>
+:root {
+  --bg: #080f1e;
+  --surface: #101c30;
+  --surface2: #15243b;
+  --text: #f1f5f9;
+  --muted: #9aabc0;
+  --accent: #38bdf8;
+  --accent2: #0ea5e9;
+  --border: rgba(148,163,184,.15);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -15,136 +29,444 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background: #0b1220;
-  color: #f1f5f9;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
   line-height: 1.7;
 }
 
-header {
-  padding: 20px;
-  text-align: center;
-  background: #111c30;
-  border-bottom: 1px solid #26364e;
-}
-
-header h2 {
-  color: #38bdf8;
-}
-
-nav {
-  margin-top: 12px;
-}
-
-nav a {
-  display: inline-block;
-  color: #cbd5e1;
+a {
+  color: inherit;
   text-decoration: none;
-  margin: 5px 8px;
-  font-size: 13px;
-}
-
-nav a:hover {
-  color: #38bdf8;
 }
 
 .container {
   width: 90%;
-  max-width: 950px;
+  max-width: 1100px;
   margin: auto;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(8,15,30,.94);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.logo {
+  font-size: 19px;
+  font-weight: bold;
+  color: var(--accent);
+}
+
+.nav-links {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+}
+
+.nav-links a {
+  font-size: 13px;
+  color: var(--muted);
+  transition: .3s;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+.menu-btn {
+  display: none;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: white;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 20px;
+  cursor: pointer;
 }
 
 .hero {
-  padding: 85px 0;
-  text-align: center;
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+  padding: 90px 0;
+  background:
+    radial-gradient(ellipse at 80% 20%,
+    rgba(14,165,233,.14), transparent 45%);
 }
 
-.hero span {
-  color: #38bdf8;
+.hero-content {
+  max-width: 780px;
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: bold;
 }
 
 .hero h1 {
-  font-size: 36px;
-  margin: 12px 0;
+  font-size: clamp(38px, 7vw, 68px);
+  line-height: 1.15;
+  margin: 22px 0;
 }
 
-.hero p {
-  color: #94a3b8;
-  max-width: 600px;
-  margin: auto;
+.hero h1 span {
+  color: var(--accent);
+}
+
+.hero-desc {
+  color: var(--muted);
+  font-size: 16px;
+  max-width: 620px;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
 }
 
 .btn {
   display: inline-block;
-  margin-top: 25px;
-  padding: 11px 22px;
-  background: #0284c7;
-  color: white;
-  text-decoration: none;
+  padding: 12px 21px;
   border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  transition: .3s;
+}
+
+.btn-primary {
+  background: var(--accent2);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #0284c7;
+  transform: translateY(-3px);
+}
+
+.btn-outline {
+  border: 1px solid var(--accent);
+  color: var(--accent);
+}
+
+.btn-outline:hover {
+  background: rgba(56,189,248,.1);
 }
 
 section {
-  padding: 45px 0;
+  padding: 85px 0;
+  scroll-margin-top: 70px;
 }
 
-h2.title {
-  color: #38bdf8;
-  margin-bottom: 22px;
-  font-size: 25px;
+.section-heading {
+  margin-bottom: 35px;
 }
 
-.card {
-  background: #142238;
-  border: 1px solid #26364e;
-  border-radius: 12px;
-  padding: 20px;
-  margin-bottom: 15px;
-}
-
-.card h3 {
-  color: #7dd3fc;
+.section-heading .eyebrow {
   margin-bottom: 8px;
 }
 
-.card p, section p {
-  color: #cbd5e1;
+.section-heading h2 {
+  font-size: 32px;
 }
 
-.skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.skills span {
-  background: #1e3a56;
-  color: #7dd3fc;
-  padding: 8px 13px;
-  border-radius: 7px;
+.section-heading p {
+  color: var(--muted);
+  margin-top: 8px;
   font-size: 14px;
 }
 
-footer {
-  text-align: center;
-  padding: 25px;
-  background: #111c30;
-  color: #94a3b8;
-  margin-top: 40px;
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 25px;
 }
 
-@media (max-width: 600px) {
-  .hero h1 {
-    font-size: 28px;
+.profile-box,
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  padding: 25px;
+}
+
+.profile-box {
+  text-align: center;
+}
+
+.avatar {
+  width: 125px;
+  height: 125px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg,#075985,#38bdf8);
+  font-size: 38px;
+  font-weight: bold;
+  color: white;
+  border: 5px solid rgba(56,189,248,.15);
+}
+
+.profile-box h3 {
+  font-size: 20px;
+}
+
+.profile-box p,
+.about-text {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.about-text p {
+  margin-bottom: 15px;
+}
+
+.info-line {
+  padding: 11px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+  color: var(--muted);
+  text-align: left;
+}
+
+.info-line b {
+  color: var(--text);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 18px;
+}
+
+.skill-card h3 {
+  margin-bottom: 18px;
+  color: var(--accent);
+  font-size: 17px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.tag {
+  padding: 8px 12px;
+  border-radius: 7px;
+  background: var(--surface2);
+  color: #c9eaff;
+  font-size: 12px;
+  border: 1px solid var(--border);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 20px;
+}
+
+.project-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: .3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+}
+
+.project-visual {
+  min-height: 135px;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle, #164e70, #101c30 70%);
+  color: var(--accent);
+  font-size: 38px;
+}
+
+.project-content {
+  padding: 22px;
+}
+
+.project-content h3 {
+  font-size: 17px;
+  margin-bottom: 9px;
+}
+
+.project-content p {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 15px;
+}
+
+.project-type {
+  font-size: 11px;
+  color: var(--accent);
+  letter-spacing: 1px;
+}
+
+.timeline {
+  border-left: 2px solid #164e70;
+  margin-left: 8px;
+  padding-left: 25px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 28px;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -33px;
+  top: 8px;
+  width: 13px;
+  height: 13px;
+  background: var(--accent);
+  border-radius: 50%;
+  box-shadow: 0 0 12px rgba(56,189,248,.5);
+}
+
+.timeline-item h3 {
+  color: var(--text);
+  font-size: 18px;
+}
+
+.timeline-item .period {
+  color: var(--accent);
+  font-size: 12px;
+  margin: 5px 0 10px;
+}
+
+.timeline-item p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.achievement-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 18px;
+}
+
+.achievement {
+  border-left: 3px solid var(--accent);
+}
+
+.achievement h3 {
+  font-size: 17px;
+  margin-bottom: 7px;
+}
+
+.achievement p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.contact-box {
+  background: linear-gradient(135deg,#102b47,#101c30);
+  border: 1px solid var(--border);
+  padding: 35px;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.contact-box h3 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.contact-box p {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 22px;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+footer {
+  padding: 28px 0;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+footer span {
+  color: var(--accent);
+}
+
+@media(max-width:750px) {
+  .menu-btn {
+    display: block;
   }
 
-  nav a {
-    font-size: 12px;
-    margin: 4px;
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 72px;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: #101c30;
+    border-bottom: 1px solid var(--border);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 17px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hero {
+    min-height: 520px;
+  }
+
+  .hero h1 {
+    font-size: 39px;
+  }
+
+  .about-grid,
+  .skills-grid,
+  .projects-grid,
+  .achievement-grid {
+    grid-template-columns: 1fr;
   }
 
   section {
-    padding: 30px 0;
+    padding: 65px 0;
+  }
+
+  .section-heading h2 {
+    font-size: 27px;
   }
 }
 </style>
@@ -153,147 +475,394 @@ footer {
 <body>
 
 <header>
-  <h2>MY PORTFOLIO</h2>
-  <nav>
-    <a href="#home">Beranda</a>
-    <a href="#about">Tentang</a>
-    <a href="#skills">Keahlian</a>
-    <a href="#projects">Proyek</a>
-    <a href="#experience">Pengalaman</a>
-    <a href="#contact">Kontak</a>
-  </nav>
+  <div class="container navbar">
+    <a href="#home" class="logo">KDP.</a>
+
+    <button class="menu-btn"
+      onclick="toggleMenu()"
+      aria-label="Buka navigasi"
+      aria-expanded="false">☰</button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" onclick="closeMenu()">Home</a>
+      <a href="#about" onclick="closeMenu()">About</a>
+      <a href="#skills" onclick="closeMenu()">Skills</a>
+      <a href="#projects" onclick="closeMenu()">Projects</a>
+      <a href="#experience" onclick="closeMenu()">Experience</a>
+      <a href="#achievements" onclick="closeMenu()">Achievements</a>
+      <a href="#contact" onclick="closeMenu()">Contact</a>
+    </nav>
+  </div>
 </header>
 
-<div class="container">
+<main>
 
+<!-- HOME -->
 <section class="hero" id="home">
-  <p><span>HELLO, WELCOME TO MY PORTFOLIO</span></p>
-  <h1>Halo, Saya <span>Koko Dwi Prayogo</span></h1>
-  <p>
-    Siswa kelas XII jurusan Teknik Komputer dan Jaringan
-    di SMK Negeri 2 Lamongan. Memiliki pengalaman
-    dalam organisasi, administrasi, kepemimpinan,
-    serta praktik kerja lapangan di PT Telkom Indonesia.
-    Memiliki semangat belajar dan terus mengembangkan
-    kemampuan di bidang teknologi dan dunia kerja.
-  </p>
-  <a href="#projects" class="btn">
-    Lihat Proyek Saya
-  </a>
+  <div class="container hero-content">
+    <p class="eyebrow">WELCOME TO MY PERSONAL PORTFOLIO</p>
+
+    <h1>Halo, Saya<br>
+      <span>Koko Dwi Prayogo.</span>
+    </h1>
+
+    <p class="hero-desc">
+      Siswa Teknik Komputer dan Jaringan yang memiliki
+      ketertarikan pada teknologi, administrasi,
+      pengembangan diri, dan organisasi.
+      Terus belajar, berkembang, dan menciptakan
+      pengalaman baru.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#projects" class="btn btn-primary">
+        Lihat Proyek
+      </a>
+
+      <a href="#contact" class="btn btn-outline">
+        Hubungi Saya
+      </a>
+    </div>
+  </div>
 </section>
 
+<!-- ABOUT -->
 <section id="about">
-  <h2 class="title">Tentang Saya</h2>
-  <div class="card">
-    <p>
-      Saya merupakan siswa jurusan Teknik Komputer
-      dan Jaringan yang memiliki semangat belajar,
-      disiplin, bertanggung jawab, serta mampu
-      bekerja sama dalam tim.
-    </p>
-    <p>
-      Saya terus mengembangkan kemampuan di bidang
-      teknologi, administrasi, komunikasi, dan
-      organisasi untuk mempersiapkan diri
-      menghadapi dunia kerja.
-    </p>
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">GET TO KNOW ME</p>
+      <h2>Tentang Saya</h2>
+      <p>Mengenal lebih dekat profil dan latar belakang saya.</p>
+    </div>
+
+    <div class="about-grid">
+      <div class="profile-box">
+        <div class="avatar">KP</div>
+        <h3>Koko Dwi Prayogo</h3>
+        <p>Student | TKJ</p>
+
+        <div class="info-line">
+          <b>Pendidikan:</b> SMK
+        </div>
+        <div class="info-line">
+          <b>Jurusan:</b> Teknik Komputer dan Jaringan
+        </div>
+        <div class="info-line">
+          <b>Sekolah:</b> SMK Negeri 2 Lamongan
+        </div>
+        <div class="info-line">
+          <b>Domisili:</b> Lamongan, Jawa Timur
+        </div>
+      </div>
+
+      <div class="card about-text">
+        <p>
+          Perkenalkan, saya Koko Dwi Prayogo,
+          siswa kelas XII jurusan Teknik Komputer
+          dan Jaringan di SMK Negeri 2 Lamongan.
+        </p>
+
+        <p>
+          Saya memiliki pengalaman dalam organisasi,
+          administrasi, kepemimpinan, serta praktik
+          kerja lapangan di PT Telkom Indonesia.
+        </p>
+
+        <p>
+          Melalui kegiatan sekolah, organisasi,
+          dan proyek pribadi, saya terus mengembangkan
+          kemampuan teknis maupun nonteknis.
+        </p>
+
+        <p>
+          Saya merupakan pribadi yang disiplin,
+          bertanggung jawab, mampu bekerja sama
+          dalam tim, dan memiliki kemauan untuk
+          terus belajar serta berkembang.
+        </p>
+      </div>
+    </div>
   </div>
 </section>
 
+<!-- SKILLS -->
 <section id="skills">
-  <h2 class="title">Keahlian</h2>
-  <div class="skills">
-    <span>Dasar Jaringan Komputer</span>
-    <span>Konfigurasi Perangkat</span>
-    <span>Administrasi</span>
-    <span>Microsoft Office</span>
-    <span>Kerja Sama Tim</span>
-    <span>Kepemimpinan</span>
-    <span>HTML & CSS Dasar</span>
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">WHAT I CAN DO</p>
+      <h2>Keahlian Saya</h2>
+      <p>Kemampuan yang saya pelajari dan kembangkan.</p>
+    </div>
+
+    <div class="skills-grid">
+      <div class="card skill-card">
+        <h3>Technical Skills</h3>
+        <div class="tags">
+          <span class="tag">Dasar Jaringan Komputer</span>
+          <span class="tag">Konfigurasi DNS</span>
+          <span class="tag">Linux Dasar</span>
+          <span class="tag">Arduino Dasar</span>
+          <span class="tag">HTML & CSS Dasar</span>
+          <span class="tag">Inventarisasi Barang</span>
+          <span class="tag">Microsoft Office</span>
+        </div>
+      </div>
+
+      <div class="card skill-card">
+        <h3>Non-Technical Skills</h3>
+        <div class="tags">
+          <span class="tag">Kepemimpinan</span>
+          <span class="tag">Administrasi</span>
+          <span class="tag">Komunikasi</span>
+          <span class="tag">Kerja Sama Tim</span>
+          <span class="tag">Manajemen Waktu</span>
+          <span class="tag">Tanggung Jawab</span>
+          <span class="tag">Disiplin</span>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
+<!-- PROJECTS -->
 <section id="projects">
-  <h2 class="title">Proyek Saya</h2>
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">MY WORK</p>
+      <h2>Proyek & Karya</h2>
+      <p>Beberapa proyek dan praktik yang pernah saya kerjakan.</p>
+    </div>
 
-  <div class="card">
-    <h3>01. Miniatur Bus LED</h3>
-    <p>
-      Proyek miniatur bus berbahan karton
-      dengan rangkaian lampu LED sebagai
-      penerapan konsep energi listrik.
-    </p>
+    <div class="projects-grid">
+
+      <article class="project-card">
+        <div class="project-visual">🚌</div>
+        <div class="project-content">
+          <span class="project-type">ELECTRONIC PROJECT</span>
+          <h3>Miniatur Bus LED</h3>
+          <p>
+            Pembuatan miniatur bus berbahan karton
+            dengan rangkaian lampu LED sebagai
+            penerapan konsep perubahan energi
+            kimia menjadi energi cahaya.
+          </p>
+          <div class="tags">
+            <span class="tag">LED</span>
+            <span class="tag">Elektronika Dasar</span>
+            <span class="tag">Kreativitas</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-visual">💡</div>
+        <div class="project-content">
+          <span class="project-type">ARDUINO EXPERIMENT</span>
+          <h3>LED Matrix Arduino</h3>
+          <p>
+            Eksperimen menggunakan Arduino,
+            modul LED Matrix, dan library
+            MD_Parola untuk mempelajari
+            tampilan teks berjalan.
+          </p>
+          <div class="tags">
+            <span class="tag">Arduino</span>
+            <span class="tag">MAX7219</span>
+            <span class="tag">Elektronika</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-visual">🌐</div>
+        <div class="project-content">
+          <span class="project-type">NETWORKING PRACTICE</span>
+          <h3>Konfigurasi DNS BIND9</h3>
+          <p>
+            Praktik pembelajaran konfigurasi
+            layanan DNS menggunakan BIND9
+            pada Linux untuk memahami
+            pengelolaan domain dan resolusi nama.
+          </p>
+          <div class="tags">
+            <span class="tag">Linux</span>
+            <span class="tag">BIND9</span>
+            <span class="tag">DNS</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-visual">📦</div>
+        <div class="project-content">
+          <span class="project-type">WAREHOUSE EXPERIENCE</span>
+          <h3>Administrasi Warehouse</h3>
+          <p>
+            Pengalaman kegiatan inventarisasi,
+            pengecekan barang, pencatatan stok,
+            barcode stock opname, dan pengemasan
+            material telekomunikasi.
+          </p>
+          <div class="tags">
+            <span class="tag">Inventory</span>
+            <span class="tag">QC</span>
+            <span class="tag">Administrasi</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
   </div>
-
-  <div class="card">
-    <h3>02. LED Matrix Arduino</h3>
-    <p>
-      Eksperimen penggunaan Arduino dan
-      LED Matrix untuk menampilkan teks
-      berjalan.
-    </p>
-  </div>
-
-  <div class="card">
-    <h3>03. Praktik Jaringan Komputer</h3>
-    <p>
-      Dokumentasi kegiatan pembelajaran
-      dan praktik konfigurasi jaringan
-      komputer.
-    </p>
-  </div>
-
 </section>
 
+<!-- EXPERIENCE -->
 <section id="experience">
-  <h2 class="title">Pengalaman</h2>
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">MY JOURNEY</p>
+      <h2>Pengalaman</h2>
+      <p>Pengalaman kerja lapangan dan organisasi.</p>
+    </div>
 
-  <div class="card">
-    <h3>Praktik Kerja Lapangan</h3>
-    <p><b>PT Telkom Indonesia</b></p>
-    <p>
-      Pengalaman di bagian warehouse,
-      meliputi penerimaan barang, pengecekan
-      material, inventarisasi, barcode stock
-      opname, dan proses pengemasan.
-    </p>
-  </div>
+    <div class="timeline">
 
-  <div class="card">
-    <h3>Organisasi Siswa Intra Sekolah</h3>
-    <p><b>OSIS</b></p>
-    <p>
-      Pengalaman dalam bidang bendahara umum,
-      administrasi keuangan, koordinasi,
-      dan kerja sama organisasi.
-    </p>
-  </div>
+      <div class="timeline-item">
+        <h3>Praktik Kerja Lapangan (PKL)</h3>
+        <p class="period">12 Januari – 30 Juni 2026</p>
+        <p>
+          <b>PT Telkom Indonesia – Warehouse Area Malang,
+          STO Klojen</b><br>
+          Melaksanakan kegiatan penerimaan material,
+          pemeriksaan kualitas barang, inventarisasi,
+          barcode stock opname, konfigurasi modem,
+          pengemasan, dan pendistribusian material
+          kepada teknisi.
+        </p>
+      </div>
 
-  <div class="card">
-    <h3>Paskibra</h3>
-    <p>
-      Mengembangkan kedisiplinan,
-      tanggung jawab, kekompakan,
-      dan kepemimpinan.
-    </p>
+      <div class="timeline-item">
+        <h3>OSIS SMK Negeri 2 Lamongan</h3>
+        <p class="period">Pengalaman Organisasi</p>
+        <p>
+          Menjalankan tanggung jawab sebagai
+          Bendahara Umum dan anggota Seksi Bidang 3.
+          Terlibat dalam administrasi keuangan,
+          pengelolaan kas, pencatatan pemasukan
+          dan pengeluaran, serta kegiatan organisasi.
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>Paskibra SMK Negeri 2 Lamongan</h3>
+        <p class="period">Pengalaman Organisasi</p>
+        <p>
+          Menjalankan tugas di bagian Perkab
+          (Perlengkapan), berpartisipasi dalam
+          kegiatan organisasi, serta mengembangkan
+          kedisiplinan, kekompakan, dan tanggung jawab.
+          Pernah mendapat penugasan sebagai
+          pembentang dalam upacara sekolah.
+        </p>
+      </div>
+
+    </div>
   </div>
 </section>
 
+<!-- ACHIEVEMENTS -->
+<section id="achievements">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">MY ACHIEVEMENTS</p>
+      <h2>Prestasi & Kegiatan</h2>
+      <p>Pengalaman kompetisi dan kegiatan yang pernah diikuti.</p>
+    </div>
+
+    <div class="achievement-grid">
+
+      <div class="card achievement">
+        <h3>🏆 Juara 2 Madya</h3>
+        <p>
+          LKBB GARUDA MUDA 2025.
+          Prestasi tim Paskibra tingkat provinsi.
+        </p>
+      </div>
+
+      <div class="card achievement">
+        <h3>🏅 Lomba Gerak Jalan</h3>
+        <p>
+          Berpartisipasi sebagai bagian dari
+          perwakilan sekolah dalam kompetisi
+          tingkat kabupaten.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
 <section id="contact">
-  <h2 class="title">Hubungi Saya</h2>
-  <div class="card">
-    <p>Email: kokoprayogo093@example.com</p>
-    <p>GitHub: github.com/koko-prayogo</p>
-    <p>Instagram: @kokodwi_03</p>
+  <div class="container">
+    <div class="contact-box">
+      <p class="eyebrow">GET IN TOUCH</p>
+      <h3>Mari Terhubung!</h3>
+      <p>
+        Terima kasih telah mengunjungi portofolio saya.
+        Silakan hubungi saya melalui kontak berikut.
+      </p>
+
+      <div class="contact-links">
+        <a class="btn btn-primary"
+          href="mailto:kokoprayogo093@example.com">
+          Email Saya
+        </a>
+
+        <a class="btn btn-outline"
+          href="https://github.com/koko-prayogo"
+          target="_blank" rel="noopener noreferrer">
+          GitHub
+        </a>
+
+        <a class="btn btn-outline"
+          href="https://instagram.kokodwi_03"
+          target="_blank" rel="noopener noreferrer">
+          Instagram
+        </a>
+      </div>
+    </div>
   </div>
 </section>
 
-</div>
+</main>
 
 <footer>
-  <p>© 2026 Koko Dwi Prayogo | Personal Portfolio</p>
-  <p>Designed with passion and creativity.</p>
+  <div class="container">
+    <p>© 2026 <span>Koko Dwi Prayogo</span> |
+    Personal Portfolio</p>
+    <p>Designed with passion and creativity.</p>
+  </div>
 </footer>
+
+<script>
+function toggleMenu() {
+  const nav = document.getElementById("navLinks");
+  const btn = document.querySelector(".menu-btn");
+
+  nav.classList.toggle("active");
+  btn.setAttribute(
+    "aria-expanded",
+    nav.classList.contains("active")
+  );
+}
+
+function closeMenu() {
+  document.getElementById("navLinks").classList.remove("active");
+  document.querySelector(".menu-btn").setAttribute(
+    "aria-expanded", "false"
+  );
+}
+</script>
 
 </body>
 </html>
